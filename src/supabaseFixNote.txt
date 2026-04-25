@@ -1,0 +1,1 @@
+Supabase persistence fix needed: remove demo local IDs, load real members from Supabase, save mutations only for UUID IDs, and reload data after roulette/coupon/stamp changes.
