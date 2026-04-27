@@ -93,6 +93,53 @@
     .audit-grid { display:grid; grid-template-columns:300px 1fr; gap:14px; }
     .audit-list { max-height:560px; overflow:auto; display:grid; gap:8px; }
     .small { font-size:12px; color:#697590; }
+
+    .menu-feature { margin-top:24px; padding:0; overflow:hidden; border:1px solid rgba(234,217,200,.9); background:linear-gradient(135deg,#fff8f0 0%,#ffffff 42%,#edf2fb 100%); position:relative; }
+    .menu-feature:before { content:''; position:absolute; width:260px; height:260px; right:-90px; top:-90px; border-radius:50%; background:radial-gradient(circle,rgba(199,162,122,.28),rgba(199,162,122,0) 68%); pointer-events:none; }
+    .menu-head { position:relative; display:flex; justify-content:space-between; gap:16px; align-items:flex-start; padding:24px 24px 0; flex-wrap:wrap; }
+    .menu-badge { display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px; background:var(--blue); color:#fff; font-size:12px; font-weight:950; box-shadow:0 12px 26px rgba(31,50,109,.2); }
+    .menu-title { margin:10px 0 8px; font-size:30px; letter-spacing:-.8px; color:var(--ink); }
+    .menu-copy { color:#5d6a86; line-height:1.6; font-weight:700; }
+    .menu-frame { position:relative; margin:22px 24px 24px; border-radius:28px; padding:14px; background:linear-gradient(135deg,var(--blue),#2f4ea3); box-shadow:0 28px 70px rgba(31,50,109,.22); }
+    .menu-image { display:block; width:100%; max-height:780px; object-fit:contain; border-radius:20px; background:#fff; border:1px solid rgba(255,255,255,.7); }
+    .menu-actions { display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-top:14px; }
+    .menu-action { display:inline-flex; align-items:center; gap:8px; text-decoration:none; border-radius:999px; padding:11px 14px; background:#fff; color:var(--blue); font-weight:950; border:1px solid #dbe3f0; }
+    .menu-empty { margin:22px 24px 24px; border-radius:26px; padding:34px 22px; text-align:center; background:#fff; border:2px dashed #d8c0a8; color:#7d5b3d; font-weight:900; }
+    .coupon-section-card { margin-top:24px; background:linear-gradient(135deg,#172447 0%,#1f326d 58%,#405cb2 100%); color:#fff; border:none; overflow:hidden; position:relative; }
+    .coupon-section-card:before { content:''; position:absolute; inset:auto -80px -120px auto; width:260px; height:260px; border-radius:50%; background:rgba(255,255,255,.08); }
+    .coupon-section-card h2, .coupon-section-card .section-title { color:#fff; position:relative; }
+    .coupon-section-card .section-title { border-color:rgba(255,255,255,.18); }
+    .coupon-section-card .history-row { background:rgba(255,255,255,.1); border-color:rgba(255,255,255,.18); }
+    .coupon-section-card .history-title { color:#fff; }
+    .coupon-section-card .history-meta { color:rgba(255,255,255,.68); }
+    .coupon-section-card .history-kind { background:rgba(255,255,255,.12); border-color:rgba(255,255,255,.18); color:#f7d9b6; }
+    .coupon-chip { position:relative; border:none; background:linear-gradient(135deg,#fff 0%,#fff8f0 100%); color:#172447; padding:12px 14px 12px 18px; font-weight:950; box-shadow:0 12px 26px rgba(31,50,109,.14); overflow:hidden; }
+    .coupon-chip:before, .coupon-chip:after { content:''; position:absolute; top:50%; transform:translateY(-50%); width:12px; height:12px; border-radius:50%; background:#f2f4f9; }
+    .coupon-chip:before { left:-6px; }
+    .coupon-chip:after { right:-6px; }
+    .coupon-icon { font-size:16px; filter:drop-shadow(0 4px 6px rgba(0,0,0,.12)); }
+    .hold-badge { background:linear-gradient(135deg,#c7a27a,#f0cfab); color:#172447; border-radius:999px; padding:4px 8px; font-size:11px; font-weight:950; }
+
+
+    .customer-hero { margin-bottom:20px; padding:28px; border-radius:32px; background:linear-gradient(135deg,#1f326d 0%,#405cb2 58%,#c7a27a 140%); color:#fff; box-shadow:0 28px 70px rgba(31,50,109,.22); position:relative; overflow:hidden; }
+    .customer-hero:before { content:''; position:absolute; width:300px; height:300px; border-radius:50%; background:rgba(255,255,255,.1); right:-90px; top:-120px; }
+    .customer-hero .eyebrow { color:#f0cfab; }
+    .customer-hero h1 { color:#fff; font-size:42px; }
+    .customer-hero .sub { color:rgba(255,255,255,.82); font-weight:700; }
+    .hero-actions { display:flex; gap:10px; flex-wrap:wrap; margin-top:18px; }
+    .hero-chip { display:inline-flex; align-items:center; gap:8px; border-radius:999px; padding:10px 14px; background:rgba(255,255,255,.13); border:1px solid rgba(255,255,255,.22); color:#fff; font-weight:900; }
+    .login-highlight { border:2px solid rgba(199,162,122,.42); background:linear-gradient(180deg,#ffffff 0%,#fffaf4 100%); }
+    .quick-pad { margin-top:14px; display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }
+    .pad-btn { border:1px solid #d7dfed; border-radius:16px; padding:15px 8px; background:#fff; color:#1f326d; font-size:20px; font-weight:950; box-shadow:0 8px 18px rgba(43,59,111,.06); }
+    .pad-btn.gold { background:#fff8f0; color:#7d5b3d; border-color:#ead9c8; font-size:15px; }
+    .search-display { margin-top:14px; display:flex; align-items:center; justify-content:space-between; gap:12px; border:2px solid #dbe3f0; background:#fff; border-radius:22px; padding:15px 16px; }
+    .search-display .digits { font-size:30px; font-weight:950; letter-spacing:.08em; color:#172447; min-height:38px; }
+    .search-display .hint { font-size:12px; color:#7b859f; font-weight:800; }
+    .wheel-labels { position:absolute; inset:0; pointer-events:none; }
+    .wheel-label { position:absolute; left:50%; top:50%; transform-origin:0 0; color:#fff; font-weight:950; font-size:11px; text-shadow:0 2px 8px rgba(0,0,0,.38); white-space:nowrap; }
+    .wheel.spinning { box-shadow:0 0 0 8px rgba(199,162,122,.2), 0 28px 80px rgba(31,50,109,.28); }
+    .admin-save-note { margin-top:10px; padding:10px 12px; border-radius:14px; background:#fff8f0; border:1px solid #ead9c8; color:#7d5b3d; font-size:13px; font-weight:850; }
+
     @media (max-width: 860px) { .grid2,.customerGrid,.heroGrid,.staff-tools,.audit-grid{grid-template-columns:1fr!important;} .actions{grid-template-columns:1fr;} h1{font-size:28px;} .wheel{width:280px;height:280px;} .search-row{grid-template-columns:1fr;} }
   </style>
 </head>
@@ -142,6 +189,7 @@
       dbMessage: '',
       menuImage: localStorage.getItem('bluedia_menu_image') || '',
       menuMessage: '',
+      settingsMessage: '',
     };
     state.rewardBag = createShuffledBag(state.rewards);
 
@@ -203,6 +251,21 @@
       localStorage.setItem('bluedia_rewards', JSON.stringify(state.rewards));
       state.rewardBag = createShuffledBag(state.rewards);
       state.bagCursor = 0;
+    }
+    async function saveRewardsToDb() {
+      saveRewards();
+      state.settingsMessage = '룰렛 설정을 저장하는 중...';
+      render();
+      const existing = await sb('app_settings?select=id&id=eq.1');
+      const payload = { rewards_json: state.rewards, updated_at: new Date().toISOString() };
+      if (existing.data && existing.data.length) {
+        const res = await sb('app_settings?id=eq.1', { method:'PATCH', body:JSON.stringify(payload) });
+        state.settingsMessage = res.error ? 'DB 저장 실패: app_settings.rewards_json 컬럼을 추가해야 합니다.' : '룰렛 설정이 저장되었습니다. 고객/직원 화면에 모두 적용됩니다.';
+      } else {
+        const res = await sb('app_settings', { method:'POST', body:JSON.stringify([{ id:1, menu_image: state.menuImage || '', rewards_json: state.rewards }]) });
+        state.settingsMessage = res.error ? 'DB 저장 실패: README의 app_settings SQL을 먼저 실행해주세요.' : '룰렛 설정이 저장되었습니다. 고객/직원 화면에 모두 적용됩니다.';
+      }
+      render();
     }
     function formatPercent(v) { return `${(v*100).toFixed(1)}%`; }
 
@@ -287,11 +350,19 @@
     async function loadMenuImage() {
       const savedLocal = localStorage.getItem('bluedia_menu_image') || '';
       if (savedLocal && !state.menuImage) state.menuImage = savedLocal;
-      const res = await sb('app_settings?select=menu_image&id=eq.1');
-      const menuImage = res.data?.[0]?.menu_image || '';
+      const res = await sb('app_settings?select=*&id=eq.1');
+      const row = res.data?.[0] || {};
+      const menuImage = row.menu_image || '';
       if (menuImage) {
         state.menuImage = menuImage;
         localStorage.setItem('bluedia_menu_image', menuImage);
+      }
+      const rewardsJson = row.rewards_json;
+      if (Array.isArray(rewardsJson) && rewardsJson.length) {
+        state.rewards = rewardsJson;
+        localStorage.setItem('bluedia_rewards', JSON.stringify(state.rewards));
+        state.rewardBag = createShuffledBag(state.rewards);
+        state.bagCursor = 0;
       }
     }
 
@@ -407,9 +478,15 @@
       const normalized = ((current % 360) + 360) % 360;
       const delta = ((finalAngle - normalized) + 360) % 360;
       const target = current + 360*6 + delta;
-      if (source === 'customer') { state.customerAngle = target; state.customerResult = '룰렛 진행 중...'; }
-      else { state.staffAngle = target; state.staffResult = '룰렛 진행 중...'; }
+      if (source === 'customer') state.customerResult = '룰렛 진행 중...';
+      else state.staffResult = '룰렛 진행 중...';
       render();
+      requestAnimationFrame(() => {
+        const wheel = document.querySelector(`[data-wheel="${source}"]`);
+        if (wheel) wheel.style.transform = `rotate(${target}deg)`;
+        if (source === 'customer') state.customerAngle = target;
+        else state.staffAngle = target;
+      });
       setTimeout(async () => {
         const reward = state.rewards[index] || state.rewards[0];
         await applySpin(memberId, reward, source);
@@ -423,7 +500,9 @@
       if (!member.coupons.length) return '<div class="muted">보유 쿠폰이 없습니다</div>';
       return `<div class="coupon-list">${member.coupons.map(c => `
         <button class="coupon-chip ${readOnly?'readonly':''}" ${readOnly ? '' : `onclick="markCouponUsed('${member.id}','${c.id}')"`}>
-          ${escapeHtml(c.label)} ${readOnly ? '' : '<span class="use-badge">사용</span>'}
+          <span class="coupon-icon">🎟️</span>
+          <span>${escapeHtml(c.label)}</span>
+          ${readOnly ? '<span class="hold-badge">보유중</span>' : '<span class="use-badge">직원 사용</span>'}
         </button>`).join('')}</div>`;
     }
     function historyList(member, limit=6) {
@@ -431,9 +510,15 @@
       return `<div class="history-list">${member.history.slice(0,limit).map(h => `
         <div class="history-row"><div><div class="history-title">${escapeHtml(h.title)}</div><div class="history-meta">${escapeHtml(h.time)}</div></div><div class="history-kind">${escapeHtml(h.kind)}</div></div>`).join('')}</div>`;
     }
-    function wheelHtml(angle) {
+    function wheelHtml(angle, owner='customer') {
       const normalized = normalize(state.rewards);
-      return `<div class="wheel-wrap"><div class="pointer"></div><div class="wheel" style="transform:rotate(${angle}deg)"></div></div>
+      const slice = 360 / state.rewards.length;
+      const labels = state.rewards.map((r,i)=>{
+        const mid = i * slice + slice / 2;
+        return `<span class="wheel-label" style="transform:rotate(${mid}deg) translate(82px,-50%) rotate(90deg)">${escapeHtml(r.name.length > 8 ? r.name.slice(0,8)+'…' : r.name)}</span>`;
+      }).join('');
+      const spinningClass = owner === 'customer' && state.customerSpinning ? ' spinning' : '';
+      return `<div class="wheel-wrap"><div class="pointer"></div><div class="wheel${spinningClass}" data-wheel="${owner}" style="transform:rotate(${angle}deg)"><div class="wheel-labels">${labels}</div></div></div>
       <div class="legend">${state.rewards.map((r,i)=>`<div class="legend-item"><span class="dot" style="background:${COLORS[i%COLORS.length]}"></span>${escapeHtml(r.name)} · ${formatPercent(normalized[i]?.normalizedProb||0)}</div>`).join('')}</div>`;
     }
 
@@ -443,15 +528,19 @@
       const remaining = Math.max(0, DAILY_CUSTOMER_SPIN_LIMIT - played);
       const canSpin = Boolean(m && remaining > 0 && m.stamps > 0 && !state.customerSpinning);
       return `<div class="page"><div class="max">
-        <div class="top"><div><div class="eyebrow">BLUEDIA COFFEE</div><h1>마이 쿠폰 & 룰렛 이벤트</h1><div class="sub">전화번호로 내 스탬프, 보유 쿠폰, 사용 이력을 확인하세요. 쿠폰 사용은 직원이 처리합니다.</div></div><button class="btn" onclick="state.mode='staffLogin';render()">직원용</button></div>
+        <div class="customer-hero"><div class="eyebrow">BLUEDIA COFFEE · CUSTOMER PAGE</div><h1>내 쿠폰 확인하고<br>룰렛 이벤트 참여하기</h1><div class="sub">QR을 찍은 고객님 전용 화면입니다. 전화번호로 내 스탬프, 쿠폰, 사용 이력을 바로 확인하세요.</div><div class="hero-actions"><span class="hero-chip">🎟️ 쿠폰 확인</span><span class="hero-chip">🎰 하루 3회 룰렛</span><span class="hero-chip">☕ 메뉴판/가격표</span></div></div>
+        <div class="top"><div><div class="eyebrow">customer first</div><h2>고객 페이지</h2><div class="sub">쿠폰 사용은 직원이 처리하고, 고객은 보유 쿠폰과 이벤트 참여 현황을 확인합니다.</div></div><button class="btn" onclick="state.mode='staffLogin';render()">직원용</button></div>
         <div class="grid2">
-          <div class="card"><div class="eyebrow">my page login</div><h2>전화번호로 내 정보 확인</h2><div class="search-row"><input class="input big" id="custPhone" placeholder="010-0000-0000" value="${escapeHtml(state.customerPhone)}"><button class="btn primary" onclick="lookupCustomer()">조회</button></div><div class="small" style="margin-top:10px">${escapeHtml(state.dbMessage)}</div>
+          <div class="card login-highlight"><div class="eyebrow">my page login</div><h2>전화번호로 내 정보 확인</h2><div class="search-row"><input class="input big" id="custPhone" placeholder="010-0000-0000" value="${escapeHtml(state.customerPhone)}"><button class="btn primary" onclick="lookupCustomer()">조회</button></div><div class="small" style="margin-top:10px">${escapeHtml(state.dbMessage)}</div>
             ${m ? `<div class="panel" style="margin-top:18px"><div class="name">${escapeHtml(m.name)} 고객님</div><div class="summary"><div class="stat"><div class="label">스탬프</div><div class="value">${m.stamps}개</div></div><div class="stat"><div class="label">보유 쿠폰</div><div class="value">${m.coupons.length}개</div></div><div class="stat"><div class="label">오늘 참여</div><div class="value">${played}/3회</div></div><div class="stat"><div class="label">남은 참여</div><div class="value">${remaining}회</div></div></div></div>` : ''}
           </div>
-          <div class="card">${wheelHtml(state.customerAngle)}<div class="result"><div class="label">이번 결과</div><div class="value">${escapeHtml(state.customerResult)}</div></div><div class="coupon-box"><h3>스탬프를 사용하여 룰렛 이벤트에 참가하시겠습니까?</h3><div class="sub">참여 시 스탬프 1개가 사용됩니다. 하루 최대 3번까지 참여 가능합니다.</div><button class="btn primary" style="width:100%;margin-top:14px" ${canSpin?'':'disabled'} onclick="spin('${m?.id||''}','customer')">${state.customerSpinning?'룰렛 진행 중...':'스탬프 1개 사용하고 룰렛 참여'}</button>${m&&m.stamps<=0?'<div class="warning">스탬프가 부족합니다.</div>':''}${m&&remaining<=0?'<div class="warning">오늘 참여 가능 횟수 3회를 모두 사용했습니다.</div>':''}</div></div>
+          <div class="card">${wheelHtml(state.customerAngle,'customer')}<div class="result"><div class="label">이번 결과</div><div class="value">${escapeHtml(state.customerResult)}</div></div><div class="coupon-box"><h3>스탬프를 사용하여 룰렛 이벤트에 참가하시겠습니까?</h3><div class="sub">참여 시 스탬프 1개가 사용됩니다. 하루 최대 3번까지 참여 가능합니다.</div><button class="btn primary" style="width:100%;margin-top:14px" ${canSpin?'':'disabled'} onclick="spin('${m?.id||''}','customer')">${state.customerSpinning?'룰렛 진행 중...':'스탬프 1개 사용하고 룰렛 참여'}</button>${m&&m.stamps<=0?'<div class="warning">스탬프가 부족합니다.</div>':''}${m&&remaining<=0?'<div class="warning">오늘 참여 가능 횟수 3회를 모두 사용했습니다.</div>':''}</div></div>
         </div>
-        <div class="card" style="margin-top:20px"><div class="eyebrow">menu & price</div><h2>메뉴판 / 가격표</h2>${state.menuImage ? `<img src="${state.menuImage}" alt="블루다이아커피 메뉴판" style="width:100%;max-height:760px;object-fit:contain;border-radius:22px;border:1px solid var(--line);background:#fff">` : '<div class="muted">아직 등록된 메뉴판 이미지가 없습니다.</div>'}</div>
-        ${m ? `<div class="card" style="margin-top:20px"><h2>내 쿠폰과 사용 이력</h2><div class="section-title">보유 쿠폰</div>${couponList(m,true)}<div class="section-title">최근 이력</div>${historyList(m,10)}</div>` : ''}
+        <div class="card menu-feature">
+          <div class="menu-head"><div><span class="menu-badge">☕ MENU & PRICE</span><h2 class="menu-title">블루다이아 메뉴판 / 가격표</h2><div class="menu-copy">주문 전 가격과 메뉴를 한눈에 확인하세요. 매장에서 등록한 최신 메뉴판이 표시됩니다.</div></div></div>
+          ${state.menuImage ? `<div class="menu-frame"><img class="menu-image" src="${state.menuImage}" alt="블루다이아커피 메뉴판"><div class="menu-actions"><a class="menu-action" href="${state.menuImage}" target="_blank" rel="noreferrer">🔍 메뉴판 크게 보기</a><span class="small" style="color:#fff">터치하면 원본 크기로 볼 수 있습니다.</span></div></div>` : '<div class="menu-empty">📋 아직 등록된 메뉴판 이미지가 없습니다.<br><span class="small">최고관리자 페이지에서 메뉴판 이미지를 등록해주세요.</span></div>'}
+        </div>
+        ${m ? `<div class="card coupon-section-card"><div class="eyebrow" style="color:#f0cfab">my coupon wallet</div><h2>내 쿠폰 지갑</h2><div class="sub" style="color:rgba(255,255,255,.74)">고객님은 쿠폰을 확인만 할 수 있고, 실제 사용 처리는 직원이 진행합니다.</div><div class="section-title">보유 쿠폰</div>${couponList(m,true)}<div class="section-title">최근 이력</div>${historyList(m,10)}</div>` : ''}
       </div></div>`;
     }
     function lookupCustomer() {
@@ -488,14 +577,31 @@
       const members = filteredMembers();
       return `<div class="page"><div class="max">
         <div class="top"><div><div class="eyebrow">BLUEDIA COFFEE · 직원 ${escapeHtml(state.staffName)}</div><h1>직원용 쿠폰/스탬프 관리</h1><div class="sub">룰렛은 고객 페이지에서만 운영합니다. 직원은 빠른 검색, 적립, 쿠폰 사용, 재구매 리셋에 집중합니다.</div></div><div class="row"><button class="btn gold" onclick="openSettings()">룰렛 설정</button><button class="btn gold" onclick="openAudit()">최고관리자 로그</button><button class="btn" onclick="state.mode='customer';render()">고객 페이지</button></div></div>
-        <div class="card"><div class="eyebrow">quick search</div><h2>회원 검색</h2><input class="input big" id="staffSearch" placeholder="이름 / 전화번호 / 뒷자리 4자리" value="${escapeHtml(state.staffQuery)}" oninput="state.staffQuery=this.value;render()"><div class="small" style="margin-top:10px">검색 결과 ${members.length}명 · ${escapeHtml(state.dbMessage)}</div><div class="section-title">신규 회원 등록</div><div class="row"><input class="input" id="newName" placeholder="이름" style="flex:1"><input class="input" id="newPhone" placeholder="010-0000-0000" style="flex:1"><button class="btn primary" onclick="addMemberFromForm()">등록</button></div><div class="section-title">재구매 리셋 운영</div><div class="small">고객이 재구매하면 회원 카드의 재구매 리셋 버튼을 누르세요. 스탬프 +1이 적립되고 오늘 룰렛 참여 횟수가 0으로 리셋됩니다.</div></div>
+        <div class="card"><div class="eyebrow">quick search</div><h2>회원 뒷자리 빠른 검색</h2><div class="sub">주차 번호 입력처럼 전화번호 뒷자리 4개를 눌러 빠르게 찾으세요.</div><div class="search-display"><div><div class="hint">전화번호 뒷자리</div><div class="digits">${escapeHtml(state.staffQuery || '----')}</div></div><button class="btn" onclick="clearStaffSearch()">초기화</button></div><div class="quick-pad">${[1,2,3,4,5,6,7,8,9].map(n=>`<button class="pad-btn" onclick="appendStaffDigit('${n}')">${n}</button>`).join('')}<button class="pad-btn gold" onclick="backspaceStaffSearch()">⌫</button><button class="pad-btn" onclick="appendStaffDigit('0')">0</button><button class="pad-btn gold" onclick="clearStaffSearch()">전체삭제</button></div><input class="input" style="margin-top:12px" placeholder="이름/전체번호 검색도 가능" value="${escapeHtml(state.staffQuery)}" oninput="state.staffQuery=this.value;render()"><div class="small" style="margin-top:10px">검색 결과 ${members.length}명 · ${escapeHtml(state.dbMessage)}</div><div class="section-title">신규 회원 등록</div><div class="row"><input class="input" id="newName" placeholder="이름" style="flex:1"><input class="input" id="newPhone" placeholder="010-0000-0000" style="flex:1"><button class="btn primary" onclick="addMemberFromForm()">등록</button></div><div class="section-title">재구매 리셋 운영</div><div class="small">고객이 재구매하면 회원 카드의 재구매 리셋 버튼을 누르세요. 스탬프 +1이 적립되고 오늘 룰렛 참여 횟수가 0으로 리셋됩니다.</div></div>
         <div class="card" style="margin-top:20px"><div class="top"><div><div class="eyebrow">member list</div><h2>회원 목록</h2></div><div class="small">쿠폰 사용은 직원만 가능</div></div><div class="member-grid">${members.map(memberCard).join('')}</div></div>
       </div>${settingsModal()}${auditModal()}</div>`;
     }
     function addMemberFromForm() {
       addMember(document.getElementById('newName').value, document.getElementById('newPhone').value, 0);
     }
+    function appendStaffDigit(digit) {
+      const onlyDigits = phoneDigits(state.staffQuery);
+      state.staffQuery = (onlyDigits + String(digit)).slice(-4);
+      render();
+    }
+    function backspaceStaffSearch() {
+      const onlyDigits = phoneDigits(state.staffQuery);
+      state.staffQuery = onlyDigits.slice(0, -1);
+      render();
+    }
+    function clearStaffSearch() {
+      state.staffQuery = '';
+      render();
+    }
     window.addMemberFromForm = addMemberFromForm;
+    window.appendStaffDigit = appendStaffDigit;
+    window.backspaceStaffSearch = backspaceStaffSearch;
+    window.clearStaffSearch = clearStaffSearch;
     function memberCard(m) {
       return `<div class="member-card"><div class="member-top"><div><div class="name">${escapeHtml(m.name)}</div><div class="phone">${escapeHtml(m.phone)}</div></div><div class="pills"><div class="pill blue">${m.stamps}개</div><div class="pill gold">쿠폰 ${m.coupons.length}개</div></div></div><div class="actions"><button class="btn" onclick="addStamp('${m.id}',1)">+1 적립</button><button class="btn" onclick="addStamp('${m.id}',-1)">-1 조정</button><button class="btn primary" onclick="confirmRepurchase('${m.id}')">재구매 리셋</button></div><div class="section-title">보유 쿠폰 · 직원 사용 처리</div>${couponList(m,false)}<div class="section-title">최근 이력</div>${historyList(m,5)}</div>`;
     }
@@ -508,12 +614,12 @@
     function settingsModal() {
       if (!state.settingsOpen) return '';
       const normalized = normalize(state.rewards);
-      return `<div class="modal"><div class="modal-card"><div class="modal-head"><div><div class="eyebrow">owner only</div><h2>룰렛 이벤트 설정</h2></div><button class="btn" onclick="closeModals()">닫기</button></div>${!state.settingsUnlocked ? `<div class="panel"><h3>사장님 전용 비밀번호</h3><input class="input" id="ownerPass" type="password" placeholder="설정 비밀번호"><button class="btn primary" style="margin-top:12px" onclick="unlockSettings()">설정 열기</button></div>` : `<div class="panel"><div class="top"><div><div class="eyebrow">reward config</div><h2>룰렛 구성</h2></div><button class="btn primary" onclick="saveSettingsForm()">저장</button></div>${state.rewards.map((r,i)=>`<div class="settings-row"><span class="dot" style="background:${COLORS[i%COLORS.length]}"></span><input class="input" id="rewardName${i}" value="${escapeHtml(r.name)}"><input class="input" id="rewardProb${i}" type="number" step="0.001" value="${r.prob}"><div class="small">${formatPercent(normalized[i]?.normalizedProb||0)}</div></div>`).join('')}<div class="small">설정은 현재 브라우저에 저장됩니다. DB 저장형 설정은 추후 확장 가능합니다.</div></div>`}</div></div>`;
+      return `<div class="modal"><div class="modal-card"><div class="modal-head"><div><div class="eyebrow">owner only</div><h2>룰렛 이벤트 설정</h2></div><button class="btn" onclick="closeModals()">닫기</button></div>${!state.settingsUnlocked ? `<div class="panel"><h3>사장님 전용 비밀번호</h3><input class="input" id="ownerPass" type="password" placeholder="설정 비밀번호"><button class="btn primary" style="margin-top:12px" onclick="unlockSettings()">설정 열기</button></div>` : `<div class="panel"><div class="top"><div><div class="eyebrow">reward config</div><h2>룰렛 구성</h2></div><button class="btn primary" onclick="saveSettingsForm()">저장</button></div>${state.rewards.map((r,i)=>`<div class="settings-row"><span class="dot" style="background:${COLORS[i%COLORS.length]}"></span><input class="input" id="rewardName${i}" value="${escapeHtml(r.name)}"><input class="input" id="rewardProb${i}" type="number" step="0.001" value="${r.prob}"><div class="small">${formatPercent(normalized[i]?.normalizedProb||0)}</div></div>`).join('')}<div class="admin-save-note">저장하면 고객 페이지와 직원 페이지의 룰렛 구성에 모두 반영됩니다. 기존에 이미 발급된 쿠폰은 그대로 유지되고, 새 혜택은 이후 발급되는 쿠폰부터 적용됩니다.</div><div class="small" style="margin-top:8px">${escapeHtml(state.settingsMessage || '')}</div></div>`}</div></div>`;
     }
-    function saveSettingsForm() {
+    async function saveSettingsForm() {
       state.rewards = state.rewards.map((r,i)=>({ ...r, name:document.getElementById(`rewardName${i}`).value, couponLabel:r.type==='coupon'?document.getElementById(`rewardName${i}`).value:r.couponLabel, prob:Number(document.getElementById(`rewardProb${i}`).value||0) }));
-      saveRewards();
-      alert('룰렛 설정을 저장했습니다.');
+      await saveRewardsToDb();
+      alert('룰렛 설정을 저장했습니다. 기존 쿠폰은 유지되고 새 쿠폰부터 변경 내용이 적용됩니다.');
       closeModals();
     }
     function auditModal() {
