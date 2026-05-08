@@ -15,9 +15,20 @@ npm run dev
 npm run build
 ```
 
+## Netlify
+
+Use this repository as the Netlify source.
+
+Build settings:
+
+```text
+Build command: npm run build
+Publish directory: dist
+```
+
 ## Environment Variables
 
-Copy `.env.example` and set these values in Netlify environment variables:
+Set these in Netlify environment variables:
 
 ```bash
 VITE_DATA_MODE=supabase
@@ -30,12 +41,4 @@ Do not commit `.env.local`.
 
 ## Supabase
 
-For a fresh Supabase project, run:
-
-1. `SUPABASE_STEP_1A_BASE_TABLES.sql`
-2. `SUPABASE_STEP_1B_OPERATION_TABLES.sql`
-3. `SUPABASE_STEP_1C_INDEXES.sql`
-4. `SUPABASE_STEP_2_FUNCTIONS.sql`
-5. `SUPABASE_STEP_3_SEED_DATA_KOREAN_FIXED.sql`
-
-For an existing project, use the patch files as needed.
+Run the Supabase SQL files from the deployment backup package before using the production site. The app expects Supabase RPC functions and tables to be installed first.
