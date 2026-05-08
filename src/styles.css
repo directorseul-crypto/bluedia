@@ -1,0 +1,995 @@
+:root {
+  --blue: #1f326d;
+  --blue-2: #405cb2;
+  --gold: #9d7c61;
+  --gold-2: #c7a27a;
+  --cream: #f9f5ef;
+  --soft: #edf2fb;
+  --line: #dbe3f0;
+  --text: #172447;
+  --muted: #63708d;
+  --danger: #b54343;
+  --green: #1d7a4d;
+  --shadow: 0 18px 45px rgba(34, 55, 116, 0.13);
+  --radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  background:
+    linear-gradient(180deg, rgba(237, 242, 251, 0.9), rgba(249, 245, 239, 0.95)),
+    radial-gradient(circle at top left, rgba(199, 162, 122, 0.2), transparent 36%);
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Noto Sans KR",
+    "Apple SD Gothic Neo",
+    sans-serif;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.62;
+}
+
+.pageShell {
+  min-height: 100vh;
+  padding: 34px 12px 32px;
+}
+
+.appShell {
+  width: min(100%, 430px);
+  min-height: calc(100vh - 50px);
+  margin: 0 auto;
+}
+
+.contactFooter {
+  position: fixed;
+  top: 6px;
+  right: 8px;
+  z-index: 20;
+  max-width: min(74vw, 260px);
+  padding: 5px 8px;
+  border: 1px solid rgba(219, 227, 240, 0.9);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.88);
+  color: #52607c;
+  font-size: 10px;
+  font-weight: 850;
+  text-align: center;
+  line-height: 1.2;
+  box-shadow: 0 6px 14px rgba(34, 55, 116, 0.08);
+  backdrop-filter: blur(8px);
+}
+
+.contactFooter strong {
+  color: var(--blue);
+  font-weight: 1000;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.eyebrow {
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.brand {
+  margin: 4px 0 2px;
+  color: var(--blue);
+  font-size: 34px;
+  font-weight: 1000;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.subline {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.modePill,
+.utilityPill,
+.tab,
+.primaryButton,
+.secondaryButton,
+.actionButton,
+.keyButton,
+.couponActions button,
+.resultItem {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+
+.modePill {
+  min-height: 42px;
+  padding: 0 13px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 900;
+  box-shadow: 0 8px 18px rgba(49, 67, 120, 0.08);
+  white-space: nowrap;
+}
+
+.topActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+  flex-wrap: wrap;
+  max-width: 150px;
+}
+
+.utilityPill {
+  min-height: 30px;
+  padding: 0 9px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.94);
+  color: #58647e;
+  font-size: 11px;
+  font-weight: 950;
+  box-shadow: 0 6px 14px rgba(49, 67, 120, 0.07);
+  white-space: nowrap;
+}
+
+.utilityPill.active {
+  border-color: transparent;
+  background: var(--blue);
+  color: #fff;
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.tab {
+  min-width: 0;
+  min-height: 48px;
+  padding: 0 6px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: #5d6885;
+  font-size: 14px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.tab.active {
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--blue), var(--blue-2));
+  color: #fff;
+}
+
+.screenStack {
+  display: grid;
+  gap: 14px;
+}
+
+.panel {
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.96);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: var(--shadow);
+}
+
+.sectionTitle {
+  margin: 7px 0 14px;
+  color: var(--text);
+  font-size: 24px;
+  font-weight: 1000;
+  letter-spacing: 0;
+  line-height: 1.18;
+}
+
+.sectionTitle.compact {
+  margin: 0 0 4px;
+  font-size: 22px;
+}
+
+.panelTitle,
+.adminTitleRow,
+.staffHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.panelTitle {
+  justify-content: flex-start;
+  margin-bottom: 13px;
+  color: var(--blue);
+}
+
+.panelTitle h2 {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 1000;
+  letter-spacing: 0;
+}
+
+.inputRow {
+  display: grid;
+  grid-template-columns: 1fr 98px;
+  gap: 9px;
+  align-items: end;
+}
+
+.formStack {
+  display: grid;
+  gap: 11px;
+}
+
+.fieldLabel {
+  display: grid;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+input,
+select {
+  width: 100%;
+  min-height: 50px;
+  padding: 0 13px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  outline: none;
+  background: #fff;
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 850;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--blue-2);
+  box-shadow: 0 0 0 3px rgba(64, 92, 178, 0.13);
+}
+
+.fixedPhoneInput {
+  display: grid;
+  grid-template-columns: 58px 1fr;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.fixedPhoneInput:focus-within {
+  border-color: var(--blue-2);
+  box-shadow: 0 0 0 3px rgba(64, 92, 178, 0.13);
+}
+
+.fixedPhoneInput span {
+  display: grid;
+  min-height: 50px;
+  place-items: center;
+  border-right: 1px solid var(--line);
+  background: #f5f7fb;
+  color: var(--blue);
+  font-size: 16px;
+  font-weight: 1000;
+}
+
+.fixedPhoneInput input {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.fixedPhoneInput input:focus {
+  box-shadow: none;
+}
+
+.primaryButton,
+.secondaryButton,
+.actionButton {
+  min-height: 50px;
+  padding: 0 13px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 1000;
+}
+
+.primaryButton {
+  background: linear-gradient(135deg, var(--blue), var(--blue-2));
+  color: #fff;
+  box-shadow: 0 12px 25px rgba(31, 50, 109, 0.22);
+}
+
+.secondaryButton {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--blue);
+}
+
+.wide {
+  width: 100%;
+}
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+  margin-top: 14px;
+}
+
+.summaryGrid.compact {
+  margin-top: 12px;
+}
+
+.stat {
+  min-height: 76px;
+  padding: 12px;
+  border: 1px solid #ebeff6;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 9px 18px rgba(49, 67, 120, 0.06);
+}
+
+.statLabel {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 5px;
+  color: #7b859f;
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.statValue {
+  color: #1a2549;
+  font-size: 21px;
+  font-weight: 1000;
+}
+
+.couponList {
+  display: grid;
+  gap: 10px;
+}
+
+.couponRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 13px;
+  border: 2px dashed #ead9c8;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #fff8f0, #fff);
+}
+
+.couponMain {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.couponMain strong {
+  color: var(--blue);
+  font-size: 17px;
+  font-weight: 1000;
+  line-height: 1.25;
+}
+
+.couponMain span {
+  color: #7b859f;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.couponActions {
+  display: grid;
+  gap: 6px;
+  flex: 0 0 auto;
+}
+
+.couponActions button {
+  min-height: 33px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: var(--blue);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: var(--blue);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.badge.green {
+  border: 1px solid #ccebd8;
+  background: #e9f8f0;
+  color: var(--green);
+}
+
+.badge.muted {
+  border: 1px solid #e4e9f2;
+  background: #f5f7fb;
+  color: #6b7590;
+}
+
+.guardText,
+.statusLine,
+.adminMeta {
+  margin: 12px 0 0;
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 1.45;
+}
+
+.guardText,
+.adminMeta {
+  color: #6a728d;
+}
+
+.statusLine.success {
+  color: var(--green);
+}
+
+.statusLine.danger {
+  color: var(--danger);
+}
+
+.wheelPanel {
+  text-align: center;
+}
+
+.wheelWrap {
+  position: relative;
+  width: 100%;
+  max-width: 330px;
+  aspect-ratio: 1;
+  margin: 0 auto 14px;
+}
+
+.pointer {
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  z-index: 2;
+  width: 0;
+  height: 0;
+  border-right: 16px solid transparent;
+  border-left: 16px solid transparent;
+  border-top: 32px solid #c14444;
+  filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.2));
+  transform: translateX(-50%);
+}
+
+.wheel {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 15px 24px rgba(31, 50, 109, 0.18));
+  transition: transform 1.4s cubic-bezier(0.12, 0.78, 0.16, 1);
+}
+
+.resultBox {
+  display: grid;
+  gap: 7px;
+  margin: 12px 0;
+  padding: 15px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #1b2750, #31478f);
+  color: #fff;
+  text-align: left;
+}
+
+.resultBox span {
+  color: #d7c1a8;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.resultBox strong {
+  font-size: 18px;
+  font-weight: 1000;
+  line-height: 1.3;
+}
+
+.reviewEventPanel {
+  padding: 13px;
+  border-color: rgba(199, 162, 122, 0.42);
+  background: linear-gradient(135deg, #fff8f0, #ffffff);
+}
+
+.reviewEventButton {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 9px;
+  min-height: 52px;
+  padding: 0 13px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #875f3d, #b28a66);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 1000;
+  line-height: 1.25;
+  box-shadow: 0 12px 22px rgba(135, 95, 61, 0.18);
+}
+
+.reviewEventButton span {
+  min-width: 0;
+}
+
+.couponRequestActions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.couponRequestButton {
+  display: flex;
+  width: 100%;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #1f326d, #405cb2);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 1000;
+  line-height: 1.2;
+  box-shadow: 0 12px 22px rgba(31, 50, 109, 0.18);
+}
+
+.couponRequestButton.gold {
+  background: linear-gradient(135deg, #875f3d, #b28a66);
+  box-shadow: 0 12px 22px rgba(135, 95, 61, 0.18);
+}
+
+.couponRequestButton:disabled {
+  cursor: not-allowed;
+  background: #dbe3f0;
+  color: #7b859f;
+  box-shadow: none;
+}
+
+.checkRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  color: #5f6c88;
+  font-size: 13px;
+  font-weight: 750;
+  line-height: 1.45;
+}
+
+.checkRow input {
+  width: 18px;
+  min-width: 18px;
+  height: 18px;
+  min-height: 18px;
+  margin-top: 1px;
+  accent-color: var(--blue);
+}
+
+.searchBox {
+  min-height: 62px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f7f9fd;
+  color: var(--blue);
+  font-size: 30px;
+  font-weight: 1000;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.keyButton {
+  min-height: 58px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--text);
+  font-size: 24px;
+  font-weight: 1000;
+}
+
+.primaryKey {
+  background: var(--blue);
+  color: #fff;
+}
+
+.resultList {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.resultItem {
+  justify-content: space-between;
+  min-height: 46px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--text);
+  font-weight: 900;
+}
+
+.resultItem.active {
+  border-color: var(--blue);
+  background: #eef3ff;
+}
+
+.resultItem small {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.staffControls {
+  display: grid;
+  grid-template-columns: 1fr 112px;
+  gap: 9px;
+  margin-top: 12px;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 13px 0;
+}
+
+.actionButton {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: #23325f;
+  font-size: 13px;
+}
+
+.actionButton.primary {
+  border-color: transparent;
+  background: var(--blue);
+  color: #fff;
+}
+
+.actionButton.gold {
+  border-color: transparent;
+  background: #875f3d;
+  color: #fff;
+}
+
+.staffCoupons {
+  margin-top: 10px;
+}
+
+.staffCouponTools {
+  display: grid;
+  gap: 8px;
+  margin: 10px 0;
+  padding: 12px;
+  border: 1px solid #ead9c8;
+  border-radius: 8px;
+  background: #fff8f0;
+}
+
+.couponToolTitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #7d5b3d;
+  font-size: 13px;
+  font-weight: 1000;
+}
+
+.staffCouponTools .actionButton {
+  width: 100%;
+  min-height: 42px;
+}
+
+.couponRequestPopup {
+  position: sticky;
+  top: 10px;
+  z-index: 4;
+  display: grid;
+  gap: 11px;
+  padding: 14px;
+  border: 1px solid rgba(199, 162, 122, 0.72);
+  border-radius: 8px;
+  background: linear-gradient(135deg, #fff8f0, #ffffff);
+  box-shadow: 0 18px 40px rgba(135, 95, 61, 0.18);
+}
+
+.requestPopupHeader,
+.requestPopupItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.requestPopupHeader h2 {
+  margin: 2px 0 0;
+  color: var(--blue);
+  font-size: 19px;
+  font-weight: 1000;
+  letter-spacing: -0.3px;
+}
+
+.requestPopupList {
+  display: grid;
+  gap: 8px;
+}
+
+.requestPopupItem {
+  padding: 10px;
+  border: 1px solid #ead9c8;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.requestCustomer {
+  min-width: 0;
+  display: grid;
+  gap: 3px;
+}
+
+.requestCustomer strong {
+  color: var(--blue);
+  font-size: 15px;
+  font-weight: 1000;
+}
+
+.requestCustomer span,
+.requestCustomer small {
+  overflow: hidden;
+  color: #7b859f;
+  font-size: 11px;
+  font-weight: 850;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.historyList {
+  display: grid;
+  gap: 6px;
+}
+
+.historyItem {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 7px;
+  min-height: 38px;
+  padding: 8px 9px;
+  border: 1px solid #ebeff6;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.historyItem strong {
+  min-width: 0;
+  overflow: hidden;
+  color: #23325f;
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.historyTime {
+  color: #7b859f;
+  font-size: 10px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.historyBadge {
+  min-height: 22px;
+  padding: 0 8px;
+  font-size: 10px;
+}
+
+.emptyState {
+  display: grid;
+  min-height: 82px;
+  place-items: center;
+  padding: 14px;
+  border: 1px solid #ead9c8;
+  border-radius: 8px;
+  background: #fff8f0;
+  color: #7d5b3d;
+  font-size: 14px;
+  font-weight: 850;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.rewardList {
+  display: grid;
+  gap: 9px;
+}
+
+.settingsGrid {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 9px;
+}
+
+.rewardEditor {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr 70px 70px;
+  gap: 8px;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ebeff6;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.rewardEditorHeader {
+  padding-top: 0;
+  padding-bottom: 0;
+  border: 0;
+  background: transparent;
+  color: #7b859f;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.rewardEditor .checkRow {
+  min-width: 0;
+}
+
+.rewardEditor .checkRow span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rewardEditor input {
+  min-height: 42px;
+  font-size: 14px;
+}
+
+.staffAdminList {
+  display: grid;
+  gap: 10px;
+}
+
+.staffAdminRow {
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid #ebeff6;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.staffAdminMeta,
+.staffAdminActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.staffAdminMeta strong {
+  color: var(--blue);
+  font-size: 15px;
+  font-weight: 1000;
+}
+
+.staffPinField input {
+  min-height: 44px;
+}
+
+.staffAdminActions .actionButton {
+  flex: 1;
+  min-height: 42px;
+}
+
+@media (max-width: 380px) {
+  .pageShell {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .brand {
+    font-size: 30px;
+  }
+
+  .panel {
+    padding: 15px;
+  }
+
+  .inputRow,
+  .staffControls,
+  .couponRequestActions,
+  .settingsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .requestPopupItem {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .rewardEditor {
+    grid-template-columns: 1fr;
+  }
+
+  .couponRow {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .couponActions {
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
